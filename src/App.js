@@ -19,11 +19,13 @@ function App() {
         rowIndex: 0,
         boardWords: [],
         boardRowStatus: [],
-        presentCharArray: [],
-        absentCharArray: [],
-        correctCharArray: [],
+        presentCharArr: [],
+        absentCharArr: [],
+        correctCharArr: [],
         status: 'IN_PROGRESS',
       };
+      setBoardData(newBoardData);
+      localStorage.setItem('board-data', JSON.stringify(newBoardData));
     }
   }, []);
 
